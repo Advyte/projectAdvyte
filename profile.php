@@ -12,7 +12,7 @@ session_start();
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>DASHBOARD - ADYTE </title>
+    <title>PROFILE </title>
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
@@ -70,9 +70,9 @@ session_start();
                         <li><a class="collapsible-header waves-effect arrow-r"><i class="fa fa-chevron-right"></i>Account Settings<i class="fa fa-angle-down rotate-icon"></i></a>
                             <div class="collapsible-body">
                                 <ul class="list-unstyled">
-                                    <li><a href="#" class="waves-effect">Change Password</a>
+                                   <li><a href="profile.php" class="waves-effect">Dashboard</a>
                                     </li>
-                                    <li><a href="#" class="waves-effect">Edit Profile</a>
+                                    <li><a href="edit-profile.php" class="waves-effect">Edit Profile</a>
                                     </li>
                                 </ul>
                             </div>
@@ -80,9 +80,9 @@ session_start();
                         <li><a class="collapsible-header waves-effect arrow-r"><i class="fa fa-hand-pointer-o"></i> Events<i class="fa fa-angle-down rotate-icon"></i></a>
                             <div class="collapsible-body">
                                 <ul class="list-unstyled">
-									<li><a href="#" class="waves-effect">All events</a>
+									<li><a href="new-event.php" class="waves-effect">New event<i class="fa fa-plus px-2"></i></a>
                                     </li>
-                                    <li><a href="#" class="waves-effect">Public</a>
+                                    <li><a href="#" class="waves-effect">All events</a>
                                     </li>
                                     <li><a href="#" class="waves-effect">Private</a>
                                     </li>
@@ -163,8 +163,142 @@ session_start();
 		
     </header>
 	
-		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+		<!--Main layout-->
+<main>
+    <div class="container-fluid">
    
+        <!--Section: Modals-->
+        <section>
+
+
+
+        </section>
+        <!--Section: Modals-->
+        
+        <!--Section: Main panel-->
+<section class="card card-cascade narrower mb-5">
+
+    <!--Grid row-->
+    <div class="row">
+
+    <!--Grid column-->
+<div class="col-md-5">
+ 
+    <!--Panel Header-->
+    <div class="view py-2 gradient-card-header success-color-dark">
+        <h5 class="mb-0 white-text text-center">Event Duration</h5>
+    </div>
+    <!--/Panel Header-->
+    
+    <!--Panel content-->
+    <div class="card-body ">
+
+        <!--Grid row-->
+        <div class="row">
+
+            <!--Grid column-->
+            <div class="col-md-6 mb-4 mx-4">
+              
+                <!--Date select-->
+              <p class="lead">
+                <span class="badge success-color-dark p-2 mt-1">Date range</span>
+              </p>
+              <select class="mdb-select colorful-select dropdown-dark">
+                <option value=""disabled selected>Choose time        period</option>
+                <option value="1">Today</option>
+                <option value="2">Yesterday</option>
+                <option value="3">Last 7 days</option>
+                <option value="3">Last 30 days</option>
+                <option value="3">Last week</option>
+                <option value="3">Last month</option>
+              </select>
+              <!--Date pickers-->
+               <p class="lead my-4">
+        <span class="badge success-color-dark p-2">Custom date</span>
+            </p>
+            <div class="md-form">
+              <input placeholder="Selected date" type="text" id="from"class="form-control datepicker">
+              <label for="date-picker-from">From</label>
+            </div>
+            <div class="md-form">
+              <input placeholder="Selected date" type="text" id="to" class="form-control datepicker">
+              <label for="date-picker-to">To</label>
+            </div>
+
+            </div>
+            <!--Grid column-->
+
+            
+            <!-- 
+            <!--Grid column-->
+            <div class="col-md-6 mb-4 text-center">
+
+            <!--Summary-->
+             <p>Total ticket sales:
+                 <strong>2000$</strong>
+                 <button type="button" class="btn btn-success btn-sm p-2" data-toggle="tooltip" data-placement="top" title="Total sales of tickets in the given period">
+                     <i class="fa fa-question"></i>
+                 </button>
+             </p>
+             <p>Average ticket sales:
+                 <strong>100.00$</strong>
+                 <button type="button" class="btn btn-success btn-sm p-2" data-toggle="tooltip" data-placement="top" title="Average daily sales of tickets in the given period">
+                     <i class="fa fa-question"></i>
+                 </button>
+             </p>
+                
+          <!--Change chart 
+<span class="min-chart my-4" id="chart-sales" data-percent="76">
+    <span class="percent"></span>
+</span>
+<h5>
+    <span class="badge green p-2">Change
+        <i class="fa fa-arrow-circle-up ml-1"></i>
+    </span>
+    <button type="button" class="btn btn-success btn-sm p-2" data-toggle="tooltip" data-placement="top" title="Percentage change compared to the same period in the past">
+        <i class="fa fa-question"> </i>
+    </button>
+</h5>
+           
+          -->
+ </div>
+    
+        
+        </div>
+        <!--Grid row-->
+
+ 
+    
+    </div>
+    <!--Panel content-->
+
+</div>
+<!--Grid column-->
+
+    </div>
+    <!--Grid row-->
+
+</section>
+<!--Section: Main panel-->
+
+        <!--Section: Table-->
+        <section class="mb-5">
+
+
+
+        </section>
+        <!--Section: Table-->
+
+        <!--Section: Accordion-->
+        <section class="mb-5">
+
+
+
+        </section>
+        <!--Section: Accordion-->
+
+    </div>
+</main>
     <!--Footer-->
     <footer class="page-footer text-center text-md-left pt-4">
        
@@ -201,6 +335,28 @@ session_start();
         $(".button-collapse").sideNav();
         
         new WOW().init();
+         // Material Select Initialization
+          $(document).ready(function () {
+          $('.mdb-select').material_select();
+          });
+     
+        // Data Picker Initialization
+         $('.datepicker').pickadate();
+        
+        // Tooltip Initialization
+         $(function () {
+         $('[data-toggle="tooltip"]').tooltip()
+         })
+        
+    // Minimalist chart
+    $(function () {
+        $('.min-chart#chart-sales').easyPieChart({
+            barColor: "#4caf50",
+            onStep: function (from, to, percent) {
+                $(this.el).find('.percent').text(Math.round(percent));
+            }
+        });
+    });
     
     </script>
 
